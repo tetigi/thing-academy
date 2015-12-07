@@ -1,0 +1,20 @@
+Default: &defaults
+  database: boob-academy.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: boob-academy_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: boob-academy_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: boob-academy_production.sqlite3
+  poolsize: 100
+  <<: *defaults

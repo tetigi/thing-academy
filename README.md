@@ -1,1 +1,1 @@
-# boobacademy
+# boob-academy
