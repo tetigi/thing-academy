@@ -40,3 +40,4 @@
     test suite that performs tests on this page. #
     You can run your tests by doing: <pre>yesod test</pre>
   <li> Also, The Game!
+  <li> Also, check out <a href=@{CompareR}>this link!</a>
