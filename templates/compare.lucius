@@ -14,3 +14,11 @@ footer {
       width:50%;
 }
 .inner_block img { width:100%; height:auto; vertical-align:middle; }
+
+.main_block_btn {width: 800px; margin:0 auto; }
+.inner_block_btn {
+    display: inline-block;
+    float:left;
+    width:50%;
+    margin:0 auto;
+    }
