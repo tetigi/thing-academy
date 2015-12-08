@@ -9,10 +9,10 @@
 <table>
     <tr>
         <td class="center_text">
-            <button .btn .btn-primary type="submit">
+            <button ##{thisButton} .btn .btn-primary type="submit">
                 This
                 <span class="glyphicon glyphicon-heart">
         <td class="center_text">
-            <button .btn .btn-primary type="submit">
+            <button id="that_btn" .btn .btn-primary >
                 That
                 <span class="glyphicon glyphicon-heart">
