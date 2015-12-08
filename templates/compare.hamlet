@@ -1,16 +1,18 @@
 <title> boob.academy
-<h1> Compare the boobies
+<h1> Compare the X
 <div class="main_block">
     <div class="inner_block">
         <img src=http://i.imgur.com/Xt6vUQD.jpg>
 
     <div class="inner_block">
         <img src=http://i.imgur.com/BqFMNlq.jpg >
-<div class="main_block_btn">
-    <div class="inner_block_btn">
-      <button .btn .btn-primary type="submit">
-         These Ones! <span class="glyphicon glyphicon-heart"></span>
-
-    <div class="inner_block_btn">
-      <button .btn .btn-primary type="submit">
-         Those Ones! <span class="glyphicon glyphicon-heart"></span>
+<table>
+    <tr>
+        <td class="center_text">
+            <button .btn .btn-primary type="submit">
+                This
+                <span class="glyphicon glyphicon-heart">
+        <td class="center_text">
+            <button .btn .btn-primary type="submit">
+                That
+                <span class="glyphicon glyphicon-heart">

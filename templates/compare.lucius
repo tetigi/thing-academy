@@ -5,6 +5,12 @@ h1 {
 footer {
     text-align: center
 }
+table {
+   width: 800px; margin: 0 auto;
+}
+.center_text{
+       text-align: center;
+}
 .main_block {width: 800px; border:2px black solid; margin:0 auto; }
 .main_block:before,.main_block:after { overflow:hidden; content:""; display:table; }
 .main_block:after { clear:both; }
@@ -14,11 +20,3 @@ footer {
       width:50%;
 }
 .inner_block img { width:100%; height:auto; vertical-align:middle; }
-
-.main_block_btn {width: 800px; margin:0 auto; }
-.inner_block_btn {
-    display: inline-block;
-    float:left;
-    width:50%;
-    margin:0 auto;
-    }
