@@ -1,19 +1,26 @@
 module Handler.Compare where
 import Import
 
+import Data.Random
+import Data.Random.Source.DevRandom
+import Data.Random.Extras
+
 data This = This
     deriving Show
 
 getCompareR :: Handler Html
 getCompareR = do
-    entityID <- runDB $ insert $ ComparisonEntity "abcdef" "ZOMG" 100
-    entity <- runDB $ get404 entityID
+    entities <- runDB $ selectList [] [Asc ComparisonElo]
+
+    Entity _ thisThingEntity <- liftIO $ runRVar (choice entities) DevRandom
+    Entity _ thatThingEntity <- liftIO $ runRVar (choice entities) DevRandom
+
+    let thisThing = comparisonValue thisThingEntity
+        thatThing = comparisonValue thatThingEntity
 
     thisValue <- lookupGetParam "this"
     thatValue <- lookupGetParam "that"
     whichValue <- lookupGetParam "which"
-    let thisThing = "THIS" :: Text
-        thatThing = "THAT" :: Text
 
     defaultLayout $ do
         setTitle $ case (thisValue, thatValue, whichValue) of

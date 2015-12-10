@@ -83,6 +83,9 @@ library
                  , containers
                  , vector
                  , time
+                 , random-fu
+                 , random-extras
+                 , random-source
 
 executable         boob-academy
     if flag(library-only)
