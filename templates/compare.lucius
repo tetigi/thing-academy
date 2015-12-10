@@ -9,7 +9,10 @@ table {
    width: 800px; margin: 0 auto;
 }
 .center_text{
-       text-align: center;
+    text-align: center;
+}
+.big_text{
+    font-size: 144px;
 }
 .main_block {width: 800px; border:2px black solid; margin:0 auto; }
 .main_block:before,.main_block:after { overflow:hidden; content:""; display:table; }

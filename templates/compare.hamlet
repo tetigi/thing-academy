@@ -1,12 +1,18 @@
 <title> boob.academy
 <h1> Compare the X
-<div class="main_block">
-    <div class="inner_block">
-        <img src=http://i.imgur.com/Xt6vUQD.jpg>
+$#<div class="main_block">
+$#    <div class="inner_block">
+$#        <img src=http://i.imgur.com/Xt6vUQD.jpg>
+$#
+$#    <div class="inner_block">
+$#        <img src=http://i.imgur.com/BqFMNlq.jpg >
 
-    <div class="inner_block">
-        <img src=http://i.imgur.com/BqFMNlq.jpg >
 <table>
+    <tr>
+        <td class="center_text big_text">
+            #{thisThing}
+        <td class="center_text big_text">
+            #{thatThing}
     <tr>
         <td class="center_text">
             <button ##{thisButton} .btn .btn-primary type="submit">

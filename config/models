@@ -8,5 +8,11 @@ Email
     user UserId Maybe
     verkey Text Maybe
     UniqueEmail email
+ComparisonEntity
+    entityHash  String
+    entityValue String
+    entityELO   Int
+    UniqueHash entityHash
+    deriving Show
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)
