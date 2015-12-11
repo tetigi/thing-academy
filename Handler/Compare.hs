@@ -25,8 +25,6 @@ getCompareR = do
         thatThing = comparisonValue thatThingEntity
         thatHash  = comparisonHash thatThingEntity
 
-    liftIO $ putStrLn thisHash
-
     -- Check for provided query parameters for a previous comparison
     thisValue <- lookupGetParam "this"
     thatValue <- lookupGetParam "that"
@@ -35,8 +33,10 @@ getCompareR = do
     -- Check if the query parameters actually contain anything
     _ <- case (thisValue, thatValue, whichValue) of
         (Just this, Just that, Just which)  -> do
+            -- Extract the relevant entities from the DB, throwing 404 if they don't exist
             Entity thisId thisThingEntity' <- runDB $ getBy404 $ UniqueHash this
             Entity thatId thatThingEntity' <- runDB $ getBy404 $ UniqueHash that
+            -- Switch on which they picked (this or that)
             case which of
                 "this"  ->
                     let (thisElo, thatElo) = getNewEloPair (comparisonElo thisThingEntity') (comparisonElo thatThingEntity') PlayerOneWin in
@@ -44,6 +44,7 @@ getCompareR = do
                 "that"  ->
                     let (thisElo, thatElo) = getNewEloPair (comparisonElo thisThingEntity') (comparisonElo thatThingEntity') PlayerTwoWin in
                     runDB $ sequence [update thisId [ComparisonElo =. thisElo], update thatId [ComparisonElo =. thatElo]]
+                -- If it's anything else, just return nothing
                 _       -> return [()]
         _               -> return [()]
 
