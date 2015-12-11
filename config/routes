@@ -6,3 +6,4 @@
 
 / HomeR GET POST
 /compare CompareR GET
+/ranking RankingR GET

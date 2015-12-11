@@ -1,0 +1,5 @@
+<title> boob.academy
+<h1> Top Ranking X
+<ol>
+    $forall (x, s) <- scores
+        <li>#{x} (#{s})
