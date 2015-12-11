@@ -7,9 +7,6 @@ import Data.Random.Extras
 
 import Logic.Elo
 
-data This = This
-    deriving Show
-
 getCompareR :: Handler Html
 getCompareR = do
     -- Get all entities from the db
