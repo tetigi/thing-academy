@@ -13,5 +13,6 @@
 
 1. Replace words with images - just replace the words with urls to images.
 2. Add logic to check if an image 404s
-2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
-3. Prettify
+3. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
+4. Add image ranking page
+5. Prettify
