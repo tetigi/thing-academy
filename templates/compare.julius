@@ -1,9 +1,9 @@
 console.log('foo');
-document.getElementById(#{toJSON thisButton}).onclick=function(){
-    console.log("This one.");
-    document.location = "@{CompareR}?this=foo&that=bar&which=baz";
+document.getElementById("this_btn").onclick=function(){
+    console.log("This one." + #{toJSON thisHash});
+    document.location = "@{CompareR}?this=" + #{toJSON thisHash} + "&that=" + #{toJSON thatHash} + "&which=this";
     };
 document.getElementById("that_btn").onclick=function(){
     console.log("That one.");
-    document.location = "@{CompareR}?this=foo&that=bar&which=baz";
+    document.location = "@{CompareR}?this=" + #{toJSON thisHash} + "&that=" + #{toJSON thatHash} + "&which=that";
     };

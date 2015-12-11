@@ -9,8 +9,8 @@ Email
     verkey Text Maybe
     UniqueEmail email
 Comparison
-    hash  String
-    value String
+    hash  Text
+    value Text
     elo   Int
     UniqueHash hash
     deriving Show

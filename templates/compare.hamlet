@@ -15,10 +15,10 @@ $#        <img src=http://i.imgur.com/BqFMNlq.jpg >
             #{thatThing}
     <tr>
         <td class="center_text">
-            <button ##{thisButton} .btn .btn-primary type="submit">
+            <button #this_btn .btn .btn-primary>
                 This
                 <span class="glyphicon glyphicon-heart">
         <td class="center_text">
-            <button id="that_btn" .btn .btn-primary >
+            <button #that_btn .btn .btn-primary >
                 That
                 <span class="glyphicon glyphicon-heart">
