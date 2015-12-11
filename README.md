@@ -6,8 +6,9 @@
 2. Install stack (http://docs.haskellstack.org/en/stable/README.html)
 3. `cd` into the repo
 4. Run `stack setup`
-5. Run `stack build`
-6. Run `stack exec -- yesod devel` - this will start up the development server
+5. Install yesod - `stack install yesod-bin cabal-install --install-ghc`
+6. Run `stack build`
+7. Run `stack exec -- yesod devel` - this will start up the development server
 
 
 ## TODO
