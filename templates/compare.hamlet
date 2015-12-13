@@ -10,9 +10,9 @@ $#        <img src=http://i.imgur.com/BqFMNlq.jpg >
 <table>
     <tr>
         <td class="center_text big_text">
-            #{thisThing}
+            <img src=#{thisThing} width=400px height=auto>
         <td class="center_text big_text">
-            #{thatThing}
+            <img src=#{thatThing} width=400px height=auto>
     <tr>
         <td class="center_text">
             <button #this_btn .btn .btn-primary>
