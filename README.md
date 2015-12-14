@@ -13,8 +13,11 @@
 
 ## TODO
 
-1. Replace words with images - just replace the words with urls to images.
-2. Get a bunch of URLs of boobs that we can download
-3. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
-4. Add image ranking page
-5. Prettify
+1. Prettify the website
+    - Put 20 boobs per page on ranking
+    - Make images square (and not gifs)
+    - Get better fonts
+    - Clean up footer
+    - Change colors of website
+    - Add fade in / out of images
+2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.

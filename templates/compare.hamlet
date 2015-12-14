@@ -1,12 +1,5 @@
 <title> boob.academy
-<h1> Compare the X
-$#<div class="main_block">
-$#    <div class="inner_block">
-$#        <img src=http://i.imgur.com/Xt6vUQD.jpg>
-$#
-$#    <div class="inner_block">
-$#        <img src=http://i.imgur.com/BqFMNlq.jpg >
-
+<h1> Which boobies are better?
 <table>
     <tr>
         <td class="center_text big_text">
@@ -16,9 +9,11 @@ $#        <img src=http://i.imgur.com/BqFMNlq.jpg >
     <tr>
         <td class="center_text">
             <button #this_btn .btn .btn-primary>
-                This
+                These
                 <span class="glyphicon glyphicon-heart">
         <td class="center_text">
             <button #that_btn .btn .btn-primary >
-                That
+                Those
                 <span class="glyphicon glyphicon-heart">
+<div class="center_text">
+    What do your best boobies beat? <a href=@{RankingR}>Go here</a> for rankings!

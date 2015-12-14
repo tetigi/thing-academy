@@ -8,8 +8,6 @@ footer {
 table {
    width: 800px; margin: 0 auto;
 }
-.center_text{
-    text-align: center;
 }
 .big_text{
     font-size: 10px;

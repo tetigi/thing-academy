@@ -6200,3 +6200,6 @@ button.close {
     display: none !important;
   }
 }
+
+.center_text{
+    text-align: center;

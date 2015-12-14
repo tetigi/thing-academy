@@ -1,5 +1,19 @@
 <title> boob.academy
-<h1> Top Ranking X
-<ol>
+<h1 class="center_text"> Top Ranking Boobies
+
+<div class="center_text">
+    Boobs per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
+
+<div class="center_text">
+    Page:
+    $forall p <- pages
+        <a href=@{RankingR}?page=#{p}&limit=#{limit}>#{p}</a>
+
+<ol start=#{startNum}>
     $forall (x, s) <- scores
-        <li>#{x} (#{s})
+        <li>
+            <a href=#{x}>
+                <img src=#{x} width=100px height=auto> (#{s})
+
+<div class="center_text">
+    Ready to compare some more? <a href=@{CompareR}>Go here</a> for more boobies!
