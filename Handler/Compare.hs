@@ -10,11 +10,16 @@ import Logic.Elo
 getCompareR :: Handler Html
 getCompareR = do
     -- Get all entities from the db
-    entities <- runDB $ selectList [] [Asc ComparisonElo]
+    entities <- runDB $ selectList [] []
 
-    -- Pick two entities at random
+    -- Pick an entity at random
     Entity _ thisThingEntity <- liftIO $ runRVar (choice entities) DevRandom
-    Entity _ thatThingEntity <- liftIO $ runRVar (choice entities) DevRandom
+
+    -- Pull out everything NOT the thing we just picked
+    otherEntities <- runDB $ selectList [ComparisonHash !=. (comparisonHash thisThingEntity)] []
+
+    -- Pick one at random
+    Entity _ thatThingEntity <- liftIO $ runRVar (choice otherEntities) DevRandom
 
     -- Expose the variables for insertion into the HTML
     let thisThing = comparisonValue thisThingEntity
