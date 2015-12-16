@@ -3,9 +3,9 @@
 <table>
     <tr>
         <td class="center_text big_text">
-            <img src=#{thisThing} width=400px height=auto>
+            <img src=#{thisThing} width=400px height=auto class="fade_in">
         <td class="center_text big_text">
-            <img src=#{thatThing} width=400px height=auto>
+            <img src=#{thatThing} width=400px height=auto class="fade_in">
     <tr>
         <td class="center_text">
             <button #this_btn .btn .btn-primary>
