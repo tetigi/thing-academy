@@ -21,12 +21,3 @@ table {
       width:50%;
 }
 .inner_block img { width:100%; height:auto; vertical-align:middle; }
-
-.fade_in {
-    animation: fadein 0.5s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}

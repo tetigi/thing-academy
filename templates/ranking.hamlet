@@ -13,7 +13,7 @@
     $forall (x, s) <- scores
         <li>
             <a href=#{x}>
-                <img src=#{x} width=100px height=auto> (#{s})
+                <img src=#{x} width=100px height=auto class="fade_in"> (#{s})
 
 <div class="center_text">
     Ready to compare some more? <a href=@{CompareR}>Go here</a> for more boobies!

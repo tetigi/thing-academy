@@ -17,5 +17,4 @@
     - Make images square (and not gifs)
     - Get better fonts
     - Change colors of website
-    - Add fade in / out of images
 2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
