@@ -1,3 +1,4 @@
+
 h1 {
     text-align: center;
     margin-bottom: 30px
@@ -21,3 +22,21 @@ table {
       width:50%;
 }
 .inner_block img { width:100%; height:auto; vertical-align:middle; }
+.grabby {
+    cursor: pointer;
+}
+.boobs a {
+  position: relative;
+  display: inline-block;
+}
+.boobs a:hover:before {
+  content: '';
+  display: block;
+  background: url("/static/images/heart_big.jpg");
+  opacity: 0.4;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

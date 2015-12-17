@@ -14,7 +14,8 @@
 ## TODO
 
 1. Prettify the website
-    - Make images square (and not gifs)
+    - Come up with better overlay
+    - Add fade-in/out for overlay
     - Get better fonts
     - Change colors of website
 2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.

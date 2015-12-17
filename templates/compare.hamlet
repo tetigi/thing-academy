@@ -2,18 +2,11 @@
 <h1> Which boobies are better?
 <table>
     <tr>
-        <td class="center_text big_text">
-            <img src=#{thisThing} width=400px height=auto class="fade_in">
-        <td class="center_text big_text">
-            <img src=#{thatThing} width=400px height=auto class="fade_in">
-    <tr>
-        <td class="center_text">
-            <button #this_btn .btn .btn-primary>
-                These
-                <span class="glyphicon glyphicon-heart">
-        <td class="center_text">
-            <button #that_btn .btn .btn-primary >
-                Those
-                <span class="glyphicon glyphicon-heart">
+        <td class="center_text boobs">
+            <a href="@{CompareR}?this=#{thisHash}&that=#{thatHash}&which=this">
+                <img src=#{thisThing} width=400px height=auto class="fade_in grabby">
+        <td class="center_text boobs">
+            <a href="@{CompareR}?this=#{thisHash}&that=#{thatHash}&which=that" class="boobs">
+                <img src=#{thatThing} width=400px height=auto class="fade_in grabby">
 <div class="center_text">
     What do your best boobies beat? <a href=@{RankingR}>Go here</a> for rankings!
