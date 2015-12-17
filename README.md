@@ -18,4 +18,5 @@
     - Add fade-in/out for overlay
     - Get better fonts
     - Change colors of website
+    - Make a background maybe?
 2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
