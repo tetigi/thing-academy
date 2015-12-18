@@ -1,8 +1,8 @@
-<title> boob.academy
-<h1 class="center_text"> Top Ranking Boobies
+<title> thing.academy
+<h1 class="center_text"> Top Ranking Things
 
 <div class="center_text">
-    Boobs per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
+    Things per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
 
 <div class="center_text">
     Page:
@@ -16,4 +16,4 @@
                 <img src=#{x} width=100px height=auto class="fade_in"> (#{s})
 
 <div class="center_text">
-    Ready to compare some more? <a href=@{CompareR}>Go here</a> for more boobies!
+    Ready to compare some more? <a href=@{CompareR}>Go here</a> for more things!

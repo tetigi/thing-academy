@@ -22,14 +22,14 @@ table {
       width:50%;
 }
 .inner_block img { width:100%; height:auto; vertical-align:middle; }
-.grabby {
+.clicky {
     cursor: pointer;
 }
-.boobs a {
+.pickable a {
   position: relative;
   display: inline-block;
 }
-.boobs a:hover:before {
+.pickable a:hover:before {
   content: '';
   display: block;
   background: url("/static/images/heart_big.jpg");
