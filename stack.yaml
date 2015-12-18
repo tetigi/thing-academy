@@ -1,5 +1,5 @@
 flags:
-  boob-academy:
+  thing-academy:
     library-only: false
     dev: false
 packages:
