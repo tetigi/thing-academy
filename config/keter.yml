@@ -12,7 +12,7 @@ stanzas:
 
     # Name of your executable. You are unlikely to need to change this.
     # Note that all file paths are relative to the keter.yml file.
-    exec: ../dist/build/boob-academy/boob-academy
+    exec: ../dist/build/thing-academy/thing-academy
 
     # Command line options passed to your application.
     args: []

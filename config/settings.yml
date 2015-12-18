@@ -18,7 +18,7 @@ ip-from-header: "_env:IP_FROM_HEADER:false"
 # skip-combining: false
 
 database:
-  database: "_env:SQLITE_DATABASE:boob-academy.sqlite3"
+  database: "_env:SQLITE_DATABASE:thing-academy.sqlite3"
   poolsize: "_env:SQLITE_POOLSIZE:10"
 
 copyright: s/l 2015
