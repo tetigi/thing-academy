@@ -119,9 +119,6 @@ getApplicationDev = do
     app <- makeApplication foundation
     return (wsettings, app)
 
-getAppSettings :: IO AppSettings
-getAppSettings = loadAppSettings [configSettingsYml] [] useEnv
-
 -- | main function for use by yesod devel
 develMain :: IO ()
 develMain = develMainHelper getApplicationDev

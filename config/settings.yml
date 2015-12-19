@@ -23,4 +23,6 @@ database:
 
 copyright: s/l 2015
 #analytics: UA-YOURCODE
-greeting: "WELCOME TO THE GAME"
+
+noun: "cat"
+plural: false

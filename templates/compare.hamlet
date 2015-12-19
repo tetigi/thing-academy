@@ -1,6 +1,8 @@
-<title> thing.academy
-<h1> Which things are better?
-<h2> #{greeting}
+<title> #{noun}.academy
+$if plural
+    <h1> Which #{noun}s are better?
+$else
+    <h1> Which #{noun} is better?
 <table>
     <tr>
         <td class="center_text pickable">
@@ -10,4 +12,4 @@
             <a href="@{CompareR}?this=#{thisHash}&that=#{thatHash}&which=that">
                 <img src=#{thatThing} width=400px height=auto class="fade_in clicky">
 <div class="center_text">
-    What do your best things beat? <a href=@{RankingR}>Go here</a> for rankings!
+    What do your best #{noun}s beat? <a href=@{RankingR}>Go here</a> for rankings!

@@ -5,6 +5,9 @@ import Data.Text.Read (decimal)
 
 getRankingR :: Handler Html
 getRankingR = do
+    conf <- liftIO $ getAppSettings
+    let noun    = appNoun conf
+
     -- Look for explicit amount of ranks to show - default is 10
     limitStr <- lookupGetParam "limit"
     let limit = case limitStr of
