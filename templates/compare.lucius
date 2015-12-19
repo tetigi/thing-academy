@@ -33,10 +33,15 @@ table {
   content: '';
   display: block;
   background: url("/static/images/heart_big.jpg");
+  animation: fadein_partial 0.5s;
   opacity: 0.4;
   width: 400px;
   height: 400px;
   position: absolute;
   top: 0;
   right: 0;
+}
+@keyframes fadein_partial {
+    from { opacity: 0; }
+    to   { opacity: 0.4; }
 }

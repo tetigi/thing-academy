@@ -13,11 +13,9 @@
 
 ## TODO
 
-1. Generalize content.
-2. Prettify the website
+1. Prettify the website
     - Come up with better overlay
-    - Add fade-in/out for overlay
     - Get better fonts
     - Change colors of website
     - Make a background maybe?
-3. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
+2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
