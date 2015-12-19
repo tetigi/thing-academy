@@ -1,8 +1,8 @@
 <title> #{noun}.academy
-<h1 class="center_text"> Top Ranking #{noun}s
+<h1 class="center_text"> Top Ranking #{toTitle noun}s
 
 <div class="center_text">
-    #{noun}s per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
+    #{toTitle noun}s per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
 
 <div class="center_text">
     Page:

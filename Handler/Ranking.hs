@@ -1,6 +1,7 @@
 module Handler.Ranking where
 import Import
 
+import Data.Text (toTitle)
 import Data.Text.Read (decimal)
 
 getRankingR :: Handler Html
