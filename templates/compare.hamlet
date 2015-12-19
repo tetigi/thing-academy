@@ -1,5 +1,6 @@
 <title> thing.academy
 <h1> Which things are better?
+<h2> #{greeting}
 <table>
     <tr>
         <td class="center_text pickable">

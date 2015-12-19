@@ -7,8 +7,13 @@ import Data.Random.Extras
 
 import Logic.Elo
 
+getAppSettings' :: IO AppSettings
+getAppSettings' = loadAppSettings [configSettingsYml] [] useEnv
+
 getCompareR :: Handler Html
 getCompareR = do
+    greeting <- liftIO $ fmap appGreeting getAppSettings'
+
     -- Get all entities from the db
     entities <- runDB $ selectList [] []
 
