@@ -10,11 +10,11 @@
 6. Run `stack build`
 7. Run `stack exec -- yesod devel` - this will start up the development server
 
+## Quick load website (with cats)
+8. Release the cats: `unzip -d static/ resources/cats.zip`
+9. Start the devel server if it's not already running (to seed the DB) `stack exec -- yesod devel`
+10. Load the images into the database: `python scripts/seed_db.py thing-academy.sqlite3 static/cats`
 
 ## TODO
 
-1. Prettify the website
-    - Come up with better overlay
-    - Change colors of website
-    - Make a background maybe?
-2. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
+1. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
