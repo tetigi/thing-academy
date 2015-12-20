@@ -1,8 +1,8 @@
 <title> #{noun}.academy
 $if plural
-    <h1> Which #{noun}s are better?
+    <h1> WHICH #{toUpper noun}S ARE BETTER?
 $else
-    <h1> Which #{noun} is better?
+    <h1> WHICH #{toUpper noun} IS BETTER?
 <table>
     <tr>
         <td class="center_text pickable">

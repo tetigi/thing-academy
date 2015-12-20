@@ -29,7 +29,6 @@ getRankingR = do
     entities <- runDB $ selectList [] [Desc ComparisonElo]
 
     let pages = [1.. ((limit - 1) + length entities) `div` limit]
-    let startNum = ((pageNum - 1) * limit) + 1
     let scores =
             drop ((pageNum - 1) * limit) $
             map (\(Entity _ e) -> (comparisonValue e, comparisonElo e)) $

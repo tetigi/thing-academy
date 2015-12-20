@@ -1,5 +1,5 @@
 <title> #{noun}.academy
-<h1 class="center_text"> Top Ranking #{toTitle noun}s
+<h1 class="center_text"> TOP RANKING #{toUpper noun}S
 
 <div class="center_text">
     #{toTitle noun}s per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
@@ -7,13 +7,16 @@
 <div class="center_text">
     Page:
     $forall p <- pages
-        <a href=@{RankingR}?page=#{p}&limit=#{limit}>#{p}</a>
+        <a href=@{RankingR}?page=#{p}&limit=#{limit}>#{p}
 
-<ol start=#{startNum}>
+<div class="center_text pickable">
     $forall (x, s) <- scores
-        <li>
-            <a href=#{x}>
-                <img src=#{x} width=100px height=auto class="fade_in"> (#{s})
+        <br>
+            <div #parent class="image">
+                <a href=#{x}>
+                    <img src=#{x} width=300px height=auto class="fade_in">
+                    <h2 #child>
+                        [#{s}]
 
 <div class="center_text">
     Ready to compare some more? <a href=@{CompareR}>Go here</a> for more #{noun}s!
