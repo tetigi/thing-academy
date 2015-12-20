@@ -1,6 +1,7 @@
 dist*
-static/
-!static/images/*
+static/boobs
+static/cats
+static/tmp
 config/client_session_key.aes
 *.hi
 *.o
