@@ -23,10 +23,10 @@ img {
 .pickable a:hover:before {
   content: '';
   display: block;
-  background: url("/static/images/heart_big.jpg");
+  background: url("/static/images/hover.jpg");
   border-radius: 20px;
   animation: fadein_partial 0.5s;
-  opacity: 0.4;
+  opacity: 0.5;
   width: 390px;
   height: 390px;
   position: absolute;
@@ -35,5 +35,5 @@ img {
 }
 @keyframes fadein_partial {
     from { opacity: 0; }
-    to   { opacity: 0.4; }
+    to   { opacity: 0.5; }
 }
