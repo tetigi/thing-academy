@@ -25,8 +25,17 @@ getRankingR = do
                 Left _          -> 1
             Nothing -> 1
 
+    -- Look for page ordering - default is DESC
+    orderStr <- lookupGetParam "order"
+    let order = case orderStr of
+            Just s  -> case s of
+                "asc"   -> "asc" :: Text
+                "desc"  -> "desc"
+                _       -> "desc"
+            Nothing -> "desc"
+
     -- Get all entities from the db
-    entities <- runDB $ selectList [] [Desc ComparisonElo]
+    entities <- runDB $ selectList [] [(if order == "asc" then Asc else Desc) ComparisonElo]
 
     let pages = [1.. ((limit - 1) + length entities) `div` limit]
     let scores =

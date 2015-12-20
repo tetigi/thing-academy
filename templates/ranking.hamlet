@@ -2,12 +2,17 @@
 <h1 class="center_text"> TOP RANKING #{toUpper noun}S
 
 <div class="center_text">
-    #{toTitle noun}s per page: <a href=@{RankingR}?limit=10>10</a> | <a href=@{RankingR}?limit=20>20</a> | <a href=@{RankingR}?limit=50>50</a>
+    #{toTitle noun}s per page: <a href=@{RankingR}?limit=10&order=#{order}>10</a> | <a href=@{RankingR}?limit=20&order=#{order}>20</a> | <a href=@{RankingR}?limit=50&order=#{order}>50</a>
 
 <div class="center_text">
     Page:
     $forall p <- pages
-        <a href=@{RankingR}?page=#{p}&limit=#{limit}>#{p}
+        <a href=@{RankingR}?page=#{p}&limit=#{limit}&order=#{order}>#{p}
+
+<div class="center_text">
+    Order by: <a href=@{RankingR}?limit=#{limit}&order=desc>Descending</a> | <a href=@{RankingR}?limit=#{limit}&order=asc>Ascending</a>
+
+<div class="center_text">
 
 <div class="center_text pickable">
     $forall (x, s) <- scores

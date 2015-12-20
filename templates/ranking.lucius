@@ -1,0 +1,20 @@
+img {
+    border-radius: 25px;
+}
+@keyframes fadein_partial {
+    from { opacity: 0; }
+    to   { opacity: 0.4; }
+}
+
+.image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+h2 {
+    opacity: 0.8;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    width: 100%;
+    color: white;
+}
