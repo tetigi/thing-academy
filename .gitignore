@@ -1,5 +1,6 @@
 dist*
-static/*
+static/
+!static/images/*
 config/client_session_key.aes
 *.hi
 *.o
