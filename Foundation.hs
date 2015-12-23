@@ -114,6 +114,8 @@ instance Yesod App where
 <h1>Not Found
 <p>We apologize for the inconvenience, but the requested page could not be located.
 |]
+    -- For internal errors, don't display to user.
+    -- Log the error instead and just say something went wrong.
     errorHandler (InternalError s) = do
         $(logInfo) $ "Internal Server Error: " ++ s
         defaultErrorHandler (InternalError "Something went wrong.")
