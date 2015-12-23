@@ -40,7 +40,7 @@ getCompareR = do
     -- Check if the query parameters actually contain anything
     _ <- case (thisValue, thatValue, whichValue) of
         (Just this, Just that, Just which)  -> do
-            -- Extract the relevant entities from the DB, throwing 404 if they don't exist
+            -- Extract the relevant entities from the DB, throwing an error if they don't exist
             maybeThis <- runDB $ getBy $ UniqueHash this
             maybeThat <- runDB $ getBy $ UniqueHash that
             let Entity thisId thisThingEntity' = fromMaybe (error $ "Invalid hash: " ++ unpack this) maybeThis
