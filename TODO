@@ -4,8 +4,12 @@
 * Heart overlay - size it to fit all images
 * All images same size?
 * No gifs?
-* gitignore config and have default/templated config
+* gitignore boob config and have default/templated config
+* Locate points of failure
+* Add sensible failure modes
+* Add tests
 
 ## BUGS/BADNESS
 
+v Not really a bug, issue with images rather than code
 * Some images are not of the category (found an image of some random anime, not boobs)
