@@ -14,14 +14,12 @@ getCompareR = do
     let noun    = appNoun conf
         plural  = appPlural conf
 
-    -- TODO will error if DB is empty
-    -- Get all entities from the db
-    entities <- runDB $ selectList [] []
+    -- Get all entities from the db. Throws error if < 2 elems in the DB.
+    entities <- fmap (\xs -> assert (length xs >= 2) xs) $ runDB $ selectList [] []
 
     -- Pick an entity at random
     Entity _ thisThingEntity <- liftIO $ runRVar (choice entities) DevRandom
 
-    -- TODO will error if DB is empty (or singleton)
     -- Pull out everything NOT the thing we just picked
     otherEntities <- runDB $ selectList [ComparisonHash !=. (comparisonHash thisThingEntity)] []
 
@@ -42,10 +40,11 @@ getCompareR = do
     -- Check if the query parameters actually contain anything
     _ <- case (thisValue, thatValue, whichValue) of
         (Just this, Just that, Just which)  -> do
-            -- TODO Make this a better error message
             -- Extract the relevant entities from the DB, throwing 404 if they don't exist
-            Entity thisId thisThingEntity' <- runDB $ getBy404 $ UniqueHash this
-            Entity thatId thatThingEntity' <- runDB $ getBy404 $ UniqueHash that
+            maybeThis <- runDB $ getBy $ UniqueHash this
+            maybeThat <- runDB $ getBy $ UniqueHash that
+            let Entity thisId thisThingEntity' = fromMaybe (error $ "Invalid hash: " ++ unpack this) maybeThis
+            let Entity thatId thatThingEntity' = fromMaybe (error $ "Invalid hash: " ++ unpack that) maybeThat
             -- Switch on which they picked (this or that)
             case which of
                 "this"  ->

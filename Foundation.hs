@@ -107,6 +107,18 @@ instance Yesod App where
 
     makeLogger = return . appLogger
 
+    -- Stub for custom error handling.
+    errorHandler NotFound = fmap toTypedContent $ defaultLayout $ do
+            setTitle "Request page not located"
+            toWidget [hamlet|
+<h1>Not Found
+<p>We apologize for the inconvenience, but the requested page could not be located.
+|]
+    errorHandler (InternalError s) = do
+        $(logInfo) $ "Internal Server Error: " ++ s
+        defaultErrorHandler (InternalError "Something went wrong.")
+    errorHandler other = defaultErrorHandler other
+
 -- How to run database actions.
 instance YesodPersist App where
     type YesodPersistBackend App = SqlBackend
