@@ -14,7 +14,3 @@
 8. Release the cats: `unzip -d static/ resources/cats.zip`
 9. Start the devel server if it's not already running (to seed the DB) `stack exec -- yesod devel`
 10. Load the images into the database: `python scripts/seed_db.py thing-academy.sqlite3 static/cats`
-
-## TODO
-
-1. Image sources - perhaps start with just google searches, moving on to stupid image searching algorithm.
