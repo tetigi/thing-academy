@@ -37,7 +37,7 @@ stop() {
         then
             echo "Stale pid (${YESOD_PID}). Cleaning up."
             >$PIDFILE
-            exit 1
+            return 1
         else
             echo -n "Stopping thing-academy... "
             for((x=0;x<3;x++)){
@@ -47,7 +47,7 @@ stop() {
                 then
                     echo "OK"
                     >$PIDFILE
-                    exit 0
+                    return 0
                 fi
             }
             echo "Failed"
