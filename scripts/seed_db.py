@@ -15,7 +15,7 @@ values = []
 for i,img in enumerate(glob.glob(sys.argv[2] + '/*')):
     values.append((i+1, simple_hash(img), img, 1500))
 
-cur.executemany('INSERT INTO comparison VALUES (?,?,?,?)', values)
+cur.executemany('INSERT INTO comparison VALUES (%s,%s,%s,%s)', values)
 conn.commit()
 
 cur.close()
