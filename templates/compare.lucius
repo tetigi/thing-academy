@@ -37,3 +37,19 @@ img {
     from { opacity: 0; }
     to   { opacity: 0.5; }
 }
+/*
+ * MOBILE
+ */
+@media only screen and (max-device-width: 420px) {
+    table {
+       width: 300px; margin: 0 auto;
+    }
+    img {
+        width: 150px;
+    }
+    .pickable a:hover:before {
+      background-size: 140px 140px;
+      width: 140px;
+      height: 140px;
+    }
+}
