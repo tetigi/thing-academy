@@ -48,10 +48,12 @@ getCompareR = do
             let Entity thatId thatThingEntity' = fromMaybe (error $ "Invalid hash: " ++ unpack that) maybeThat
 
             -- Add an event to the history
+            currentTime <- liftIO $ getCurrentTime
             _ <- runDB $ insert $ HistoryEvent
                 this (comparisonElo thisThingEntity')
                 that (comparisonElo thatThingEntity')
                 (which == "this")
+                currentTime
 
             -- Update the ELO: Switch on which they picked (this or that)
             case which of
