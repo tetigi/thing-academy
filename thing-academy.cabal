@@ -85,9 +85,7 @@ library
                  , containers
                  , vector
                  , time
-                 , random-fu
-                 , random-extras
-                 , random-source
+                 , random
 
 executable         thing-academy
     if flag(library-only)

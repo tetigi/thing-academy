@@ -1,9 +1,8 @@
 module Handler.Compare where
 import Import
 
-import Data.Random
-import Data.Random.Source.DevRandom
-import Data.Random.Extras
+import Data.List ((!!))
+import System.Random (randomRIO)
 
 import Logic.Elo
 
@@ -18,13 +17,15 @@ getCompareR = do
     entities <- fmap (\xs -> assert (length xs >= 2) xs) $ runDB $ selectList [] []
 
     -- Pick an entity at random
-    Entity _ thisThingEntity <- liftIO $ runRVar (choice entities) DevRandom
+    randomInt1 <- liftIO $ randomRIO (0, length entities -1)
+    let Entity _ thisThingEntity = entities !! randomInt1
 
     -- Pull out everything NOT the thing we just picked
     otherEntities <- runDB $ selectList [ComparisonHash !=. (comparisonHash thisThingEntity)] []
 
     -- Pick one at random
-    Entity _ thatThingEntity <- liftIO $ runRVar (choice otherEntities) DevRandom
+    randomInt2 <- liftIO $ randomRIO (0, length otherEntities -1)
+    let Entity _ thatThingEntity = entities !! randomInt2
 
     -- Expose the variables for insertion into the HTML
     let thisThing = comparisonValue thisThingEntity

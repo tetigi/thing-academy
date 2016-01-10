@@ -18,8 +18,12 @@ ip-from-header: "_env:IP_FROM_HEADER:false"
 # skip-combining: false
 
 database:
-  database: "_env:SQLITE_DATABASE:thing-academy.sqlite3"
-  poolsize: "_env:SQLITE_POOLSIZE:10"
+  user:     "_env:PGUSER:thingacademy_LOWER"
+  password: "_env:PGPASS:foobarbaz"
+  host:     "_env:PGHOST:localhost"
+  port:     "_env:PGPORT:5432"
+  database: "_env:PGDATABASE:thingacademy_LOWER"
+  poolsize: "_env:PGPOOLSIZE:10"
 
 copyright: s/l 2015
 #analytics: UA-YOURCODE

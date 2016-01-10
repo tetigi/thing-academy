@@ -5,6 +5,5 @@ flags:
 packages:
 - '.'
 extra-deps: [
-    random-extras-0.19
 ]
 resolver: lts-3.17
