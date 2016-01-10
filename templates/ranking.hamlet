@@ -24,4 +24,9 @@
                         [#{s}]
 
 <div class="center_text">
+    Page:
+    $forall p <- pages
+        <a href=@{RankingR}?page=#{p}&limit=#{limit}&order=#{order}>#{p}
+
+<div class="center_text">
     Ready to compare some more? <a href=@{CompareR}>Go here</a> for more #{noun}s!
