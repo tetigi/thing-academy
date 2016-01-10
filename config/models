@@ -14,5 +14,12 @@ Comparison
     elo   Int
     UniqueHash hash
     deriving Show
+HistoryEvent
+    thisHash Text
+    thisElo  Int
+    thatHash Text
+    thatElo  Int
+    thisWins Bool
+
 
  -- By default this file is used in Model.hs (which is imported by Foundation.hs)

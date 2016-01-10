@@ -13,7 +13,7 @@
 ## Quick load website (with cats)
 8. Release the cats: `unzip -d static/ resources/cats.zip`
 9. Start the devel server if it's not already running (to seed the DB) `stack exec -- yesod devel`
-10. Load the images into the database: `python scripts/seed_db.py thing-academy.sqlite3 static/cats`
+10. Load the images into the database: `python scripts/seed_db.py "dbname=thingacademy user=thingacademy password=foobarbaz" static/cats`
 
 ## Adding new images
 1. Download images locally into a folder

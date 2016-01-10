@@ -46,7 +46,14 @@ getCompareR = do
             maybeThat <- runDB $ getBy $ UniqueHash that
             let Entity thisId thisThingEntity' = fromMaybe (error $ "Invalid hash: " ++ unpack this) maybeThis
             let Entity thatId thatThingEntity' = fromMaybe (error $ "Invalid hash: " ++ unpack that) maybeThat
-            -- Switch on which they picked (this or that)
+
+            -- Add an event to the history
+            _ <- runDB $ insert $ HistoryEvent
+                this (comparisonElo thisThingEntity')
+                that (comparisonElo thatThingEntity')
+                (which == "this")
+
+            -- Update the ELO: Switch on which they picked (this or that)
             case which of
                 "this"  ->
                     let (thisElo, thatElo) = getNewEloPair (comparisonElo thisThingEntity') (comparisonElo thatThingEntity') PlayerOneWin in
