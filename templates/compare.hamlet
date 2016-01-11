@@ -13,3 +13,6 @@ $else
                 <img src=#{thatThing} width=400px height=auto class="fade_in clicky">
 <div class="center_text">
     What do your best #{noun}s beat? <a href=@{RankingR}>Go here</a> for rankings!
+<div class="center_text">
+    <a href=@{AboutR}>
+        About #{noun}.academy

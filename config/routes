@@ -6,3 +6,4 @@
 
 / CompareR GET
 /ranking RankingR GET
+/about AboutR GET

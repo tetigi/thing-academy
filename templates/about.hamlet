@@ -1,0 +1,27 @@
+<title> #{noun}.academy
+<h1 class="center_text"> ABOUT #{toUpper noun}.ACADEMY
+
+<h3> What is #{noun}.academy?
+<p>
+    #{noun}.academy is the number one place to compare #{noun}s of course!
+
+<h3> How does ranking work?
+<p>
+    #{noun}.academy uses a simple ELO system, much like that used in chess - individual candidates are pitted against each other, and once a winner is determined (when you pick your favourite), their respective ELOs are updated. Higher ELO = better #{noun}s!
+
+<h3> What's up next for #{noun}.academy?
+<p>
+   I'm glad you asked! We're planned on adding a bunch of new features as time goes on:
+<ul>
+    <li> Statistics over time for each candidate, so you can see how far they've come!
+    <li> Automatic image sourcing for more #{noun}s - because no doubt a robit will do a better job than we do!
+    <li> User accounts and rankings!
+
+<h3> ..why?
+<p>
+    Why not! For S & L this was an exercise in making a stupid website and seeing how far we can get it :)
+
+<div class="center_text">
+    Ready to compare some more? <a href=@{CompareR}>Go here</a> for more #{noun}s!
+    <br>
+    What do your best #{noun}s beat? <a href=@{RankingR}>Go here</a> for rankings!

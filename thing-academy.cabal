@@ -20,6 +20,7 @@ library
                      Model
                      Settings
                      Settings.StaticFiles
+                     Handler.About
                      Handler.Common
                      Handler.Compare
                      Handler.Ranking
