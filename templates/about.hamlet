@@ -8,6 +8,8 @@
 <h3> How does ranking work?
 <p>
     #{noun}.academy uses a simple ELO system, much like that used in chess - individual candidates are pitted against each other, and once a winner is determined (when you pick your favourite), their respective ELOs are updated. Higher ELO = better #{noun}s!
+    <br>
+    All candidates start with 1500 ELO points, and are matched against other candidates at random!
 
 <h3> What's up next for #{noun}.academy?
 <p>
