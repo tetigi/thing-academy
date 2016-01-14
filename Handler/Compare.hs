@@ -14,18 +14,12 @@ getCompareR = do
         plural  = appPlural conf
 
     -- Get all entities from the db. Throws error if < 2 elems in the DB.
-    entities <- fmap (\xs -> assert (length xs >= 2) xs) $ runDB $ selectList [] []
+    entities <- fmap (\xs -> assert (length xs >= 2) xs) $ runDB $ selectList [] [Desc ComparisonElo]
 
-    -- Pick an entity at random
-    randomInt1 <- liftIO $ randomRIO (0, length entities -1)
-    let Entity _ thisThingEntity = entities !! randomInt1
-
-    -- Pull out everything NOT the thing we just picked
-    otherEntities <- runDB $ selectList [ComparisonHash !=. (comparisonHash thisThingEntity)] []
-
-    -- Pick one at random
-    randomInt2 <- liftIO $ randomRIO (0, length otherEntities -1)
-    let Entity _ thatThingEntity = entities !! randomInt2
+    -- Pick two adjacent entities at random
+    randomInt <- liftIO $ randomRIO (0, length entities -2)
+    let Entity _ thisThingEntity = entities !! randomInt
+    let Entity _ thatThingEntity = entities !! (randomInt + 1)
 
     -- Expose the variables for insertion into the HTML
     let thisThing = comparisonValue thisThingEntity
